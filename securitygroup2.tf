@@ -1,5 +1,5 @@
 resource "aws_security_group" "ssh_and_port3000" {
-  vpc_id = aws_vpc.myvpc.id
+  vpc_id = module.network.vpc_id
 
   egress {
     from_port   = 0
@@ -16,13 +16,13 @@ resource "aws_security_group" "ssh_and_port3000" {
     // Put your office or home address in it!
     cidr_blocks = ["10.0.0.0/16"]
   }
-   ingress {
-        from_port = 3000
-        to_port = 3000
-        protocol = "tcp"
-        cidr_blocks = ["10.0.0.0/16"]
-    }
-  tags  = {
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.0.0/16"]
+  }
+  tags = {
     Name = "ssh-allowed"
   }
 }

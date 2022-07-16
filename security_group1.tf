@@ -1,5 +1,5 @@
 resource "aws_security_group" "ssh-allowed" {
-  vpc_id = aws_vpc.myvpc.id
+  vpc_id = module.network.vpc_id
 
   egress {
     from_port   = 0
