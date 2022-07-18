@@ -1,4 +1,5 @@
 # Terraform_task
+![image](https://user-images.githubusercontent.com/93028894/179547906-e186536e-3888-49da-922d-85f7eb1a382d.png)
 
 this task is aim to improve terraform tool by using it to create infrastructure in AWS  
 
