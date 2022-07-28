@@ -8,7 +8,7 @@ resource "aws_instance" "public_ec2" {
 
   tags = {
     Name = "bastion-ec2"
-  }
+  } 
   provisioner "local-exec" {
     command = "echo ${self.public_ip}"
   }

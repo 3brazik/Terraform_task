@@ -8,6 +8,7 @@ resource "aws_db_instance" "rds_db_mysql" {
   password             = "foobarbaz"
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
+  db_subnet_group_name = aws_db_subnet_group.db_subnet_group.name
 
   tags = {
     Name = "db_naaaame"
